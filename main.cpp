@@ -15,11 +15,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	DebugText* debugText = nullptr;
 	AxisIndicator* axisIndicator = nullptr;
 	GameScene* gameScene = nullptr;
-
 	// ゲームウィンドウの作成
 	win = WinApp::GetInstance();
-	win->CreateGameWindow();
-
+	win->CreateGameWindow(" LE2D_06_サキヒロユウキ");
+	// ゲームウィンドウの作成
+	
 	// DirectX初期化処理
 	dxCommon = DirectXCommon::GetInstance();
 	dxCommon->Initialize(win);
