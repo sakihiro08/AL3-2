@@ -51,8 +51,9 @@ class GameScene {
 	Sprite* sprite_ = nullptr;
 	uint32_t soundDatahandle_ = 0;
 	Model* model_ = nullptr;
-	WorldTransform worldTransform_;
-
+	WorldTransform worldTransform_[100];
+	//カメラ上
+	float viewAngle = 0.0f;
 	uint32_t voiceHandle_ = 0;
 	int32_t value_ = 0;
 	// BGスプライト
