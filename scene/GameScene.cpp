@@ -51,15 +51,26 @@ sprite_->SetPosition(position);
    {
 	   audio_->StopWave(voiceHandle_);
    }
-   debugText_->Print("tinha saikouno ounanoda",50,50,1.0f);
+  /* debugText_->Print("tinha saikouno ounanoda",50,50,1.0f);
    debugText_->SetPos(50, 70);
-   debugText_->Printf("year%d", 2022);
+   debugText_->Printf("year%d", 2022);*/
    value_++;
    char str[100];
+   char str2[100];
+   char str3[100];
+   sprintf_s(
+	 str, "scale %f,%f,%f,", worldTransform_.scale_.x,
+	 worldTransform_.scale_.y,worldTransform_.scale_.z);
 
-   sprintf_s(str, "scale %f", worldTransform_.scale_.x);
-   debugText_->Print(str, 200, 10, 2);
-  
+
+   sprintf_s(str2, "rotasion %f,%f,%f,", worldTransform_.rotation_.x, worldTransform_.rotation_.y,
+	 worldTransform_.rotation_.z);
+   sprintf_s(
+	 str3, "translation %f,%f,%f,", worldTransform_.translation_.x, worldTransform_.translation_.y,
+	 worldTransform_.translation_.z);
+   debugText_->Print(str, 200, 20, 2);
+   debugText_->Print(str2, 200, 45, 2);
+   debugText_->Print(str3, 200, 70, 2);
 }
 
 void GameScene::Draw() {
