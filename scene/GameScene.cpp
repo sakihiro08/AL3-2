@@ -56,8 +56,10 @@ sprite_->SetPosition(position);
    debugText_->Printf("year%d", 2022);
    value_++;
    char str[100];
-   sprintf_s(str, "scale %f", scale_);
+
+   sprintf_s(str, "scale %f", worldTransform_.scale_.x);
    debugText_->Print(str, 200, 10, 2);
+  
 }
 
 void GameScene::Draw() {
