@@ -62,6 +62,21 @@ class GameScene {
 	//ビュー
 	ViewProjection viewProjection_;
 	int scale_;
+
+  public:
+	enum PartId {
+		Root,  //大元
+		Spine, //脊髄
+		Chest, //胸
+		Head,  //あたま
+		ArmL,  //左手
+		ArmR,  //右手
+		Hip,   //尻
+		LegL,  //左足
+		LegR,  //右足
+	};
+ 
+	
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
